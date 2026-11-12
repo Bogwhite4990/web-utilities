@@ -1,0 +1,18 @@
+{
+  "name": "production-web-utils",
+  "version": "1.0.0",
+  "description": "Lightweight security and utility helpers for mission-critical web platforms.",
+  "main": "utils.js",
+  "scripts": {
+    "test": "node utils.test.js"
+  },
+  "keywords": [
+    "security",
+    "utilities",
+    "sanitization",
+    "production",
+    "helpers"
+  ],
+  "author": "Open Source Contributor",
+  "license": "MIT"
+}
