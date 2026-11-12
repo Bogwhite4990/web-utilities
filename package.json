@@ -1,18 +1,24 @@
 {
   "name": "production-web-utils",
-  "version": "1.0.0",
-  "description": "Lightweight security and utility helpers for mission-critical web platforms.",
-  "main": "utils.js",
+  "version": "1.2.0",
+  "description": "Lightweight security, rate-limiting, and HTTP header utilities for mission-critical web platforms.",
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "test": "node utils.test.js"
+    "test": "node utils.test.js",
+    "demo": "node examples/usage-demo.js"
   },
   "keywords": [
     "security",
-    "utilities",
-    "sanitization",
-    "production",
-    "helpers"
+    "xss-sanitization",
+    "rate-limiter",
+    "http-headers",
+    "validation",
+    "production-utils"
   ],
-  "author": "Open Source Contributor",
-  "license": "MIT"
+  "author": "Adrian Bogdan (Bogwhite4990)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
