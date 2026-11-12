@@ -1,7 +1,7 @@
 /**
  * Simple test suite for production web utilities.
  */
-const { validateSecureEmail, sanitizeInput, generateSecureToken } = require('./utils');
+const { validateSecureEmail, sanitizeInput, generateSecureToken } = require('./security-helper');
 
 function runTests() {
     console.log("Running tests for Web Utilities...");
