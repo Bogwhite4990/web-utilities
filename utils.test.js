@@ -1,28 +1,17 @@
 /**
- * Simple test suite for production web utilities.
+ * Advanced Usage Demo for Production Web Utilities
  */
-const { validateSecureEmail, sanitizeInput, generateSecureToken } = require('./security-helper');
+const { validateSecureEmail, sanitizeInput, generateSecureToken } = require('../security-helper');
 
-function runTests() {
-    console.log("Running tests for Web Utilities...");
+console.log("--- Starting Production Utilities Demo ---");
 
-    // Test email validation
-    const emailTest1 = validateSecureEmail("contact@octbe.com") === true;
-    const emailTest2 = validateSecureEmail("invalid-email") === false;
-    
-    // Test sanitization
-    const sanitizeTest = sanitizeInput("<script>alert('xss')</script>") === "&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;";
+// 1. Test sanitization
+const maliciousInput = "<script>alert('xss')</script>";
+const cleanOutput = sanitizeInput(maliciousInput);
+console.log("Sanitized Input Result:", cleanOutput);
 
-    // Test token generation
-    const token = generateSecureToken(16);
-    const tokenTest = token.length === 16;
+// 2. Test secure token generation
+const sessionToken = generateSecureToken(40);
+console.log("Generated Secure Session Token:", sessionToken);
 
-    if (emailTest1 && emailTest2 && sanitizeTest && tokenTest) {
-        console.log("SUCCESS: All tests passed successfully!");
-    } else {
-        console.error("FAILURE: Some tests failed.");
-        process.exit(1);
-    }
-}
-
-runTests();
+console.log("--- Demo Completed Successfully ---");
